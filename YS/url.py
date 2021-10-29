@@ -4,11 +4,11 @@ from .import views
 
 urlpatterns=[
 path("organic",views.Organic,name="organic"),
-path("CONTACTS",views.CONTACT,name="cont"),
-path("Checkout",views.Checkout,name="check"),
-path("Shopdetails",views.Shopdetails,name="shopd"),
+path("CONTACTS",views.CONTACT,name="contact"),
 path("Shop",views.Shop,name="Shop"),
-path("ShoppingCart",views.ShoppingCart,name="cart"),
-
+path("Shopd",views.Shopdetails,name="shopd"),
+path("Shopart",views.ShoppingCart,name="cart"),
+path("checkout",views.Checkout,name="check"),
+path("cont",views.CONTACT,name="cont"),
 
 ]
