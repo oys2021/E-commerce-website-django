@@ -10,5 +10,7 @@ path("Shopd",views.Shopdetails,name="shopd"),
 path("Shopart",views.ShoppingCart,name="cart"),
 path("checkout",views.Checkout,name="check"),
 path("cont",views.CONTACT,name="cont"),
+path("login",views.Login,name="login"),
+path("Signup",views.Signup,name="signup"),
 
 ]
