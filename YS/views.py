@@ -1,10 +1,10 @@
 from django.core.checks import messages
 from django.http import response
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
-
+from .models import Product
 # Create your views here.
 def Organic(response):
 	return render(response,"YS/index.html",{})
@@ -15,11 +15,14 @@ def CONTACT(response):
 def Checkout(response):
 	return render(response,"YS/checkout.html",{})
 
+
+def Shop(response):
+	products=Product.objects.all()
+	return render(response,"YS/shop-grid.html",{'products':products})
+
 def Shopdetails(response):
 	return render(response,"YS/shop-details.html",{})
 
-def Shop(response):
-	return render(response,"YS/shop-grid.html",{})
 
 def ShoppingCart(response):
 	return render(response,"YS/shoping-cart.html",{})
